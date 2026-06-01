@@ -4,22 +4,25 @@ package com.wsp.lease.web.admin.controller.lease;
 import com.wsp.lease.common.result.Result;
 import com.wsp.lease.model.entity.LeaseAgreement;
 import com.wsp.lease.model.enums.LeaseStatus;
+import com.wsp.lease.web.admin.service.LeaseTermService;
 import com.wsp.lease.web.admin.vo.agreement.AgreementQueryVo;
 import com.wsp.lease.web.admin.vo.agreement.AgreementVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 
 @Tag(name = "租约管理")
 @RestController
 @RequestMapping("/admin/agreement")
+@RequiredArgsConstructor
 public class LeaseAgreementController {
-
     @Operation(summary = "保存或修改租约信息")
     @PostMapping("saveOrUpdate")
     public Result saveOrUpdate(@RequestBody LeaseAgreement leaseAgreement) {
+
         return Result.ok();
     }
 
